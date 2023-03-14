@@ -1,13 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HeaderView from '../layout/HeaderView.vue'
+import MainLayout from '../layout/MainLayout.vue'
+import HelloWorld from '../components/HelloWorld.vue'
 
 
 const routes = [
   {
     path: '/',
-    name: 'Header',
-    component: HeaderView
-  }]
+    name: 'Layout',
+    component: MainLayout
+  },
+  {
+    path: '/',
+    name : 'main',
+    component: HelloWorld
+  }
+]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

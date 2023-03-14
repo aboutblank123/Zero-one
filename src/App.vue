@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <Header />
-  </div>
+  <MainLayout>
+    <template v-slot:main>
+      <div>这是插槽内容</div>
+    </template>
+  </MainLayout>
 </template>
 
 <script>
-import Header from "@/layout/HeaderView.vue";
+import MainLayout from "./layout/MainLayout.vue";
 
 export default {
   provide: {
@@ -24,8 +26,8 @@ export default {
   },
   name: "App",
   components: {
-    Header,
-  },
+    MainLayout,
+},
 };
 </script>
 
